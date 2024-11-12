@@ -21,7 +21,9 @@ Execute the C Program for the desired output.
 # PROGRAM:
 
 ## Write a C program that illustrates two processes communicating using shared memory.
-```
+```c
+// Register Number: 212223240183
+// Name:Visalan H
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
@@ -31,7 +33,7 @@ int main()
 	// Generate a unique key using ftok
 	key_t key = ftok("shmfile", 65);
 
-	// Get an identifier for the shared memory segment using shmget
+	// Get an identifier for the shared memory segment using shmget()
 	int shmid = shmget(key, 1024, 0666 | IPC_CREAT);
       printf("Shared memory id = %d \n",shmid);
 // Attach to the shared memory segment using shmat
@@ -43,13 +45,14 @@ int main()
 	printf("Data written in memory: %s\n", str);
 
 	// Detach from the shared memory segment using shmdt
+
 	shmdt(str);
 
 	return 0;
 }
 ```
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/74d43826-219c-4098-b0f3-85f5e44e2ff8)
+![output](https://github.com/user-attachments/assets/74d43826-219c-4098-b0f3-85f5e44e2ff8)
 
 
 # RESULT:
