@@ -1,4 +1,4 @@
-//shm.c
+//shmry2.c
 
 #include<unistd.h> 
 #include<stdlib.h> 
